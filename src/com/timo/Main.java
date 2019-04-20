@@ -1,4 +1,4 @@
-package com.company;
+package com.timo;
 
 public class Main {
 
