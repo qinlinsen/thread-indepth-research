@@ -161,3 +161,7 @@ Java集合类都是快速失败的，这就意味着当集合被改变且一个�
 Executors为Executor，ExecutorService，ScheduledExecutorService，ThreadFactory和Callable类提供了一些工具方法。
 
 Executors可以用于方便的创建线程池。
+
+
+
+Future取得的结果类型和Callable返回的结果类型必须一致，这是通过泛型来实现的。
