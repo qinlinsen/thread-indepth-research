@@ -1,11 +1,13 @@
 package com.timo;
 
+import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class LockCondtionDemo {
     private static class Mywork{
+        //thread visiable
         private volatile boolean flag=true;//是否等待
         private Lock lock=new ReentrantLock();
         private Condition condition=lock.newCondition();
@@ -60,6 +62,7 @@ public class LockCondtionDemo {
             public void run() {
                 for (int i = 0; i < 5; i++) {
                     mywork.main();
+                    Semaphore semaphore;
                 }
             }
         },"main-thread").start();

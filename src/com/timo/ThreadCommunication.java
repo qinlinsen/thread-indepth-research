@@ -61,7 +61,6 @@ public class ThreadCommunication {
             }
         }).start();
         new Thread(new Runnable(){
-            Executors
             @Override
             public void run() {
                 for(int i=0;i<3;i++){
